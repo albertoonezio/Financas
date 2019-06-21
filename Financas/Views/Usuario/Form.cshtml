@@ -1,0 +1,14 @@
+﻿@model Financas.Entidades.Usuario
+
+@using (Html.BeginForm("Adiciona", "Usuario", FormMethod.Post))
+{
+    @Html.LabelFor(u => u.Nome, "Nome:")
+    @Html.TextBoxFor(u => u.Nome, new { @class = "form-control" })
+    @Html.ValidationMessageFor(u => u.Nome)
+
+    @Html.LabelFor(u => u.Email, "E-Mail:")
+    @Html.TextBoxFor(u => u.Email, new { @class = "form-control" })
+    @Html.ValidationMessageFor(u => u.Email)
+
+    <input type="submit" value="Enviar" />
+}
