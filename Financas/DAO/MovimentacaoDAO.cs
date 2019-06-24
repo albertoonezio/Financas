@@ -34,6 +34,7 @@ namespace Financas.DAO
         public IList<Movimentacao> Busca(decimal? valorMinimo, decimal? valorMaximo, DateTime? dataMinima, DateTime? dataMaxima, Tipo? tipo, int? usuarioId)
         {
             IQueryable<Movimentacao> busca = context.Movimentacoes;
+
             if (valorMinimo.HasValue)
             {
                 busca = busca.Where(m => m.Valor >= valorMinimo);
@@ -53,6 +54,18 @@ namespace Financas.DAO
             {
                 busca = busca.Where(m => m.Data <= dataMaxima);
             }
+
+            if (tipo.HasValue)
+            {
+                busca = busca.Where(m => m.Tipo == tipo);
+            }
+
+            if (usuarioId.HasValue)
+            {
+                busca = busca.Where(m => m.UsuarioId == usuarioId);
+            }
+
+            return busca.ToList();
         }
     }
 }

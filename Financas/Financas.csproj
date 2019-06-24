@@ -174,6 +174,7 @@
     <Content Include="Views\Movimentacao\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Movimentacao\MovimentacoesPorUsuario.cshtml" />
+    <Content Include="Views\Movimentacao\Busca.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

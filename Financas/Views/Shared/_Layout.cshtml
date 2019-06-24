@@ -13,6 +13,13 @@
         <main class="col-sm-8">
             @RenderBody()
         </main>
+        <aside class="col-sm-4">
+            <h3>Acesso Rápido</h3>
+            <ul>
+                <li>@Html.ActionLink("Movimentações por Usuario", "MovimentacoesPorUsuario", "Movimentacao")</li>
+                <li>@Html.ActionLink("Busca de Movimentações", "Busca", "Movimentacao")</li>
+            </ul>
+        </aside>
     </div>
 </body>
 </html>
